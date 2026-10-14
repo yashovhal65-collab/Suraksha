@@ -298,3 +298,9 @@ footer{
   font-size:14px;
   border-top:1px solid var(--line)
 }
+body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+}
