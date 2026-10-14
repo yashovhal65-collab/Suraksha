@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Suraksha – Women Safety & Emergency Help</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Fraunces:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Suraksha</h1>
+<p class="sub">Women safety & emergency help. Your location is shared only when you press a button.</p>
+
+<section>
+<h2>Emergency SOS</h2>
+<button class="sos" id="sosBtn" aria-label="Send SOS alert">SOS</button>
+<div class="small" style="text-align:center">Press to share your live location with trusted contacts.</div>
+<div class="out" id="sosOut" aria-live="polite"></div>
+</section>
+
+<section>
+<h2>Trusted contacts</h2>
+<input id="cName" placeholder="Name (e.g. Mummy)" autocomplete="off">
+<div class="row"><input id="cNum" type="tel" inputmode="tel" placeholder="Mobile with country code, 919876543210"><button class="primary" id="addC">Add</button></div>
+<div id="cList"></div>
+</section>
+
+<section>
+<h2>Check-in timer</h2>
+<p class="small" style="margin-top:0">Set a time to reach home. If you don't tap "I'm safe" before it ends, an alert is prepared.</p>
+<div class="big" id="tDisp">00:00</div>
+<div class="row"><input id="tMin" type="number" min="1" value="30" aria-label="Minutes"><button class="primary" id="tStart">Start</button><button id="tSafe">I'm safe</button></div>
+<div class="out" id="tOut" aria-live="polite"></div>
+</section>
+
+<section>
+<h2>Fake call</h2>
+<p class="small" style="margin-top:0">Get out of an uncomfortable situation with a realistic incoming call screen.</p>
+<input id="fName" value="Papa" aria-label="Caller name">
+<div class="row"><select id="fDelay" aria-label="Delay"><option value="0">Ring now</option><option value="10">In 10 seconds</option><option value="30">In 30 seconds</option></select><button class="primary" id="fGo">Start</button></div>
+</section>
+
+<section>
+<h2>Unsafe area reports</h2>
+<input id="uText" placeholder="Where and what? (e.g. Dark road near bus stand)">
+<div class="row"><select id="uType" aria-label="Type"><option>Poor lighting</option><option>Harassment</option><option>Isolated area</option><option>Other</option></select><button class="primary" id="uAdd">Report</button></div>
+<div id="uList"></div>
+</section>
+
+<section class="help">
+<h2>Helplines (India)</h2>
+<a href="tel:112">Emergency 112</a><a href="tel:100">Police 100</a><a href="tel:1091">Women 1091</a><a href="tel:181">Abhayam 181</a><a href="tel:102">Ambulance 102</a>
+<p class="small">Battery guard: <span id="bat">checking…</span></p>
+</section>
+</main>
+
+<div id="call" role="dialog" aria-label="Incoming call">
+<div><div class="small">mobile</div><div class="nm" id="cNm"></div><div class="small" id="cSt">Incoming call…</div></div>
+<div class="acts"><button class="dec" id="cDec" aria-label="Decline">✕</button><button class="acc" id="cAcc" aria-label="Answer">✆</button></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
